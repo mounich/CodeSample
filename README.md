@@ -1,5 +1,5 @@
 # CodeSample
-Triptage uses Angular 2 along with TypeScript for front-end implementation. 
+The Application uses Angular 2 along with TypeScript for front-end implementation. 
 Included is the coding sample of the view trip component. This component enables the user to view all the trips that they have taken and every minute detail of it. 
 
 view-trip.component.html:
