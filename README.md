@@ -9,4 +9,6 @@ view-trip.component.ts:
   This typescript handles all the services and bindingd along with HTTP providers and pipes. 
 view-trip.component.css: 
   The css file includes all the design foe the HTML page. 
+  
+  More Code sample on request
 
