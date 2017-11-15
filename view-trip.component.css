@@ -1,0 +1,109 @@
+.header {
+	width: 100%;
+	height: 100px;
+	background: rgba(2, 86, 77, 0.8);
+}
+.logoImageContainer {
+	vertical-align: top;
+	display: inline-block;
+	width: 10%;
+	min-width: 85px;
+	height: 85%;
+	padding: 0 3%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.logoImageContainer img {
+	height: 100%;
+}
+.searchBarContainer {
+	vertical-align: top;
+	display: inline-block;
+	height: 47%;
+	width: 50%;
+	padding-left: 3%;
+	top: 50%;
+	position: relative;
+	transform: translateY(-50%);
+}
+.searchBarContainer input {
+	width: 100%;
+	height: 100%;
+	padding-left: 10px;
+	font-size: 110%;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 1);
+	border: 0px;
+	border: none;
+	background: rgba(187,210,210, 1);
+}
+/*---------------------------------------------*/
+.searchButtonContainer {
+	vertical-align: top;
+	display: inline-block;
+	height: 47%;
+	width: 10%;
+	padding-left: 0%;
+	top: 50%;
+	position: relative;
+	transform: translateY(-50%);
+}
+.searchButton:before {
+	display: inline-block;
+	height: 100%;
+	content: '';
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+.searchButton {
+	width: 100%;
+	height: 100%;
+	font-size: 123%;
+	border-radius: 4px;
+	background: rgb(208,84,25);
+	text-align: center;
+	vertical-align: middle;
+}
+/*---------------------------------------------*/
+.newRouteButtonContainer {
+	vertical-align: top;
+	display: inline-block;
+	height: 47%;
+	width: 13%;
+	padding-left: 5%;
+	top: 50%;
+	position: relative;
+	transform: translateY(-50%);
+}
+.newRouteButton:before {
+	display: inline-block;
+	height: 100%;
+	content: '';
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+.newRouteButton {
+	width: 100%;
+	height: 100%;
+	font-size: 123%;
+	border-radius: 4px;
+	background: rgb(208,84,25);
+	text-align: center;
+	vertical-align: middle;
+}
+/*---------------------------------------------*/
+.profileImageContainer {
+	vertical-align: top;
+	display: inline-block;
+	width: 10%;
+	height: 85%;
+	padding-left: 3%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.profileImageContainer img {
+	border-radius: 100%;
+	height: 100%;
+}
