@@ -1,0 +1,140 @@
+<div *ngIf="loadingTripClassData">
+	Loading Data
+</div>
+<div *ngIf="!loadingTripClassData">
+	<div class="bodyContainer">
+		<div class="boxSection">
+			<div class="row">
+				<div class="col col6 midCol">
+					<span class="fontLg">
+						{{tripClass.tripName}}
+					</span>
+					<span class="fontSm">
+						on {{ tripClass.tripPublishDate | normalDate }} at {{ tripClass.tripPublishDate | normalTime}}
+					</span>
+				</div>
+				<div class="col col6 rightCol midCol">
+					<div class="row">
+						<div class="col col8 midCol">
+							<div class="fontSm">
+								by {{ userService.getFullName(tripClass.userId) }}
+							</div>
+							<div class="profileImage">
+								<img src="{{ userService.getProfileImage(tripClass.userId) }}" class="rounded"/>
+							</div>
+						</div>
+						<div class="col col4 midCol" *ngIf="((authDataService.userLoggedIn) && (authDataService.userId == tripClass.userId))">
+							<div class="button">
+								Edit Trip
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separator">
+			</div>
+			<div class="row">
+					<div class="equalContainer">
+						<div class="equalCol contentColor">
+							<div class="contentPadding">
+								<div class="row parameterRow">
+									<div class="col col1 centerCol">
+										<i class="fa fa-clock-o fa-2x fontMd" aria-hidden="true"></i>
+									</div>
+									<div class="col col5">
+										<span class="fontMd">
+											Total Time
+										</span>
+									</div>
+									<div class="col col6">
+										<span class="fontMd">
+											{{ 0 | durationDays:tripClass.tripTotalDays:tripClass.tripTotalHours:tripClass.tripTotalMinutes }}
+										</span>
+									</div>
+								</div>
+								<div class="row parameterRow">
+									<div class="col col1 centerCol">
+										<i class="fa fa-usd fa-2x fontMd" aria-hidden="true"></i>
+									</div>
+									<div class="col col5">
+										<span class="fontMd">
+											Expenses
+										</span>
+									</div>
+									<div class="col col6">
+										<span class="fontMd">
+											{{ costService.getLow(tripClass.tripExpenseCategory) | currency:'USD':true:'1.2-2' }}
+											-
+											{{ costService.getHigh(tripClass.tripExpenseCategory) == -1 ? "beyond": costService.getHigh(tripClass.tripExpenseCategory) | currency:'USD':true:'1.2-2' }}
+										</span>
+									</div>
+								</div>
+								<div class="row parameterRow">
+									<div class="col col1 centerCol">
+										<i class="fa fa-calendar fa-2x fontMd" aria-hidden="true"></i>
+									</div>
+									<div class="col col5">
+										<span class="fontMd">
+											Start Date
+										</span>
+									</div>
+									<div class="col col6">
+										<span class="fontMd">
+											{{ tripClass.tripStartDate | normalDate }}
+										</span>
+									</div>
+								</div>
+								<div class="row parameterRow">
+									<div class="col col1 centerCol">
+										<i class="fa fa-calendar fa-2x fontMd" aria-hidden="true"></i>
+									</div>
+									<div class="col col5">
+										<span class="fontMd">
+											End Date
+										</span>
+									</div>
+									<div class="col col6">
+										<span class="fontMd">
+											{{ tripClass.tripEndDate | normalDate }}
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="equalCol contentColor">
+							<div class="contentPadding">
+								<div class="row parameterRow">
+									<div class="col col4 midCol">
+										<rating rate="2"></rating>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+
+				 <div class="col col4 fontSm">
+				</div> 
+				 <div class="editTripInfoSaveButtonContainer">
+					<div class="editTripInfoSaveButton">
+						<span>
+							Save
+						</span>
+					</div>
+				</div>
+				<div class="editTripInfoDeleteButtonContainer">
+					<div class="editTripInfoDeleteButton">
+						<span>
+							Delete
+						</span>
+					</div>
+				</div>
+				<div class="visibilityDropDown">
+					<select>
+						<option>Public</option>
+						<option selected>Private</option>
+					</select>
+				</div> 
+		</div>
+	</div>
+</div>
